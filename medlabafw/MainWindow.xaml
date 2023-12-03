@@ -1,0 +1,35 @@
+﻿<Window x:Class="medlabafw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:medlabafw"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="MainWindow" Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome />
+    </WindowChrome.WindowChrome>
+    <Grid Style="{DynamicResource GridStyle1}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29"/>
+            <RowDefinition/>
+            <RowDefinition Height="76"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="164,49,94,0" TextWrapping="Wrap" Text="Логин" Style="{DynamicResource MaterialDesignTextBlock}" TextAlignment="Center" Grid.RowSpan="1" Grid.Row="1" Height="26" VerticalAlignment="Top" />
+        <TextBox x:Name="tbLogin" Margin="140,80,70,0" TextWrapping="Wrap" Grid.RowSpan="1" Grid.Row="1" Height="26" VerticalAlignment="Top" />
+        <Button x:Name="bvhod" Content="Войти" Margin="156,192,86,0" Grid.RowSpan="1" Grid.Row="1" Height="32" VerticalAlignment="Top" Click="bvhod_Click" />
+        <TextBlock Margin="164,115,94,0" TextWrapping="Wrap" Text="Пароль" Style="{DynamicResource MaterialDesignTextBlock}" TextAlignment="Center" Grid.RowSpan="1" Grid.Row="1" Height="26" VerticalAlignment="Top" />
+        <PasswordBox x:Name="tbPassword" Margin="140,146,70,0" Grid.RowSpan="1" Grid.Row="1" Height="26" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Авторизация" VerticalAlignment="Top" Style="{DynamicResource MaterialDesignTextBlock}" Height="25" Width="115" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="14,13,0,0" Grid.RowSpan="2" >
+        </TextBlock>
+        <Button Content="-" Margin="0,18,46,0" VerticalAlignment="Top" Height="18" FontSize="6" Background="#FF4EB73A" Click="Button_Click_1" HorizontalAlignment="Right" Width="18" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Content="-" Margin="0,18,18,0" VerticalAlignment="Top" Height="18" FontSize="6" Background="#FFB72C1B" Click="Button_Click" HorizontalAlignment="Right" Width="18" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
