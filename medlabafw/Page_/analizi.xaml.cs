@@ -65,7 +65,9 @@ namespace medlabafw.Page_
         {
             using (var context = new medlabaEntities())
             {
-                dgrid.ItemsSource = context.Анализ.ToList();
+                var currentTours = context.Анализ.ToList();
+                currentTours = currentTours.Where(p => p.Пациент.ToString().Contains(pacz.СНИЛС.ToString())).ToList();
+                dgrid.ItemsSource = currentTours;
             }
         }
 
